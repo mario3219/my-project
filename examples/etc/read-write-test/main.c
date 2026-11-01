@@ -7,7 +7,7 @@
 int main(void) {
 
   const char *path = "../../../../data/read-write_test.txt";
-  int fd = open(path, O_RDWR | O_CREAT);
+  int fd = open(path, O_RDWR | O_CREAT, 0644);
 
   if (fd == -1) {
     perror("open");
@@ -15,7 +15,17 @@ int main(void) {
   }
 
   float value = 100.00;
-  utils_read(fd, &value);
+  float tmp = 0.0;
+
+  utils_write(fd, &value);
+
+  printf("Write: %.2f\n", value);
+
+  lseek(fd, 0, SEEK_SET);
+
+  utils_read(fd, &tmp);
+
+  printf("Read: %.2f\n", tmp);
 
   close(fd);
 
