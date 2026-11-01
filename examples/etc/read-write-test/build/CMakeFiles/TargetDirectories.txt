@@ -1,0 +1,3 @@
+/home/jonathan/git-repos/DSP-library/examples/etc/read-write-test/build/CMakeFiles/test.dir
+/home/jonathan/git-repos/DSP-library/examples/etc/read-write-test/build/CMakeFiles/edit_cache.dir
+/home/jonathan/git-repos/DSP-library/examples/etc/read-write-test/build/CMakeFiles/rebuild_cache.dir
